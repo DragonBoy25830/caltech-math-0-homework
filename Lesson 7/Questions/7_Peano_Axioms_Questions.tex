@@ -1,0 +1,103 @@
+\documentclass[10pt]{report}
+\makeindex
+
+\usepackage{amsmath, amsfonts, amssymb, amstext, amscd, amsthm, makeidx, graphicx, hyperref, url}
+\newtheorem{theorem}{Theorem}
+\allowdisplaybreaks
+
+\setcounter{chapter}{0}
+\topmargin -.5in
+\textheight 9.0in
+
+\begin{document}
+
+\begin{center}\textsc{\Large Transition to Mathematical Proofs}
+
+\textsc{\large Chapter 7 - Peano Arithmetic Assignment}
+
+\bigskip
+
+\end{center}
+
+
+
+\noindent\textsc{Introduction:} You may have noticed that in earlier chapters, properties such as commutativity and associativity were taken for granted. Here, we will not be continuing that trend. Unfortunately, the proofs of commutativity, associativity, and distributivity for addition and multiplication in Peano Arithmetic are neither quick nor enlightening. Thus, we will state that they hold, and the proofs will be left to the motivated reader. We encourage you to think carefully about why these must be stated as theorems instead of just using them. Henceforth, you may use the following theorems in your proofs. 
+
+
+\begin{theorem}[Commutativity]
+For all $a, b \in \mathbb{N}$, the following hold:
+$$
+a+b = b+a
+$$
+$$
+a\cdot b = b \cdot a
+$$
+\end{theorem}
+
+\begin{theorem}[Associativity]
+For all $a, b, c \in \mathbb{N}$, the following hold:
+$$
+a+(b+c) = (a+b)+c
+$$
+$$
+a\cdot(b\cdot c) = (a\cdot b)\cdot c
+$$
+\end{theorem}
+
+\begin{theorem}[Distributivity]
+For all $a, b, c \in \mathbb{N}$, the following holds:
+$$
+a\cdot(b+c) = a\cdot b + a\cdot c
+$$
+\end{theorem}
+
+\bigskip
+
+\noindent\textsc{Instructions:}  For the below questions, show all of your work.  For the proofs, be sure that you \\
+\noindent
+(i) write a complete proof in full English sentences; \\
+(ii) if hand-writing, write legibly and clearly.
+
+\bigskip
+
+\noindent Hint: Many of these results may be proved using the rigorous notion of induction studied in this chapter's reading. 
+
+\bigskip
+
+\noindent\textbf{Question 1.}  Let $a, b, c \in \mathbb{N}$.  Show that if $a+b = a+c$, then $b=c$. 
+
+\bigskip
+ 
+
+
+\noindent\textbf{Question 2.}  Let $a \in \mathbb{N}$.   
+
+\begin{itemize}
+
+\item[(a)] Show that $a+a = 2\cdot a$. Remember that the symbol ``2" means the successor of 1, which is the successor of 0. 
+
+\item[(b)] Show that the $n$-fold sum $a + \ldots + a = n\cdot a$.  
+
+\end{itemize}
+
+\bigskip
+
+\noindent\textbf{Question 3.}  In this question, we will explore one way to define the standard ordering ``$\leq$" on the natural numbers, and prove some important properties about it.  Let $a, b \in \mathbb{N}$.  Define $a \leq b$ if and only if there exists some $c \in \mathbb{N}$ such that $a+c = b$. 
+
+\begin{itemize}
+
+\item[(a)] Let $a, b, c \in \mathbb{N}$ such that $c \neq 0$ and $a = b\cdot c$. Prove that $b\leq a$. 
+
+\item[(b)] Let $a \in \mathbb{N}$. Prove that $a \leq a$. You may recall this is known as the \textit{reflexive} property. 
+
+\item[(c)] Let $a, b, c \in \mathbb{N}$. Prove that if $a \leq b$ and $b \leq c$, then $a \leq c$. You may also recall this is known as the \textit{transitive} property. 
+
+\item[(d)] Let $a, b \in \mathbb{N}$. Prove that if $a \leq b$ and $b \leq a$, then $a = b$. This property is called \textit{antisymmetry}, and is where $\leq$ differs from an equivalence relation (which instead has \textit{symmetry}). 
+
+\end{itemize}
+
+\noindent After doing parts (b), (c), and (d), you have proven that the relation ``$\leq$" is an \textit{partial ordering} on $\mathbb{N}$. If we also prove that for every $a, b \in \mathbb{N}$ it is the case that $a \leq b$ or $b\leq a$ (Try it! This property is known as \textit{totality}), we will have shown that $\leq$ is a \textit{total} ordering. 
+
+
+
+\end{document}

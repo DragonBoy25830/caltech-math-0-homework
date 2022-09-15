@@ -1,0 +1,226 @@
+\input{C:/Code Projects/Caltech Math 0/preamble.tex}
+
+\begin{document}
+    \begin{center}
+        \huge \sc Lesson 7 Solutions
+    \end{center}
+
+    \begin{paragraph}{1)}
+        \textbf{Proposition:} Let $a, b, c \in \N$. Show that if $a + b = a + c$, then $b = c$.
+        \spacing
+        
+        \textbf{Discussion:} We will induct on $a$ and keep $b$ and $c$ fixed, but arbitrary.
+        \spacing
+
+        First, we'll show the base case $a = 0$ to be true for the statement by using
+        the definition and commutativity of addition.
+        \spacing
+
+        Then, we'll assume for $a \in \N$,
+        $$a + b = a + c \Rightarrow b = c$$
+        We will show that for $S(a) \in \N$,
+        $$S(a) + b = S(a) + c \Rightarrow b + c$$
+
+        \textbf{Proof:} To prove $p \Rightarrow q$: $a + b = a + c \Rightarrow b = c$, we will first show that the statement is true by inducting on $a$ to show that $p$ and $q$ are true.
+        \spacing
+
+        First, we'll show the base case $a = 0$ to be true. We'll start by assuming $p$ to be true and showing that 
+        the statement holds.
+        \begin{align*}
+            a + b \stackrel{?}{=} a + c \\
+            0 + b \stackrel{?}{=} 0 + c \\
+            b + 0 \stackrel{?}{=} c + 0 && \text{(commutativity of addition)} \\
+            b = c && \text{(definition of addition)}
+        \end{align*}
+        
+        Thus, we have shown that the base case holds.
+        \spacing
+
+        Now, we will start with the inductive step and assume that for $a \in \N$,
+        $$a + b = a + c \Rightarrow b = c$$
+        We will show that this statement is true for $S(a)$ by showing that
+        $$S(a) + b = S(a) + c \Rightarrow b = c$$
+
+        Looking at the left side of the hypothesis of the $S(a)$ statement, we can show the following:
+        \begin{align*}
+            S(a) + b\\
+            b + S(a) && \text{(commutativity of addition)} \\
+            S(b + a)&& \text{(definition of addition)} \\
+            S(a + b) && \text{(commutativity of addition} \\
+            S(a + c) && \text{(hypothesis of inductive assumption)} \\
+            S(c + a) && \text{(commutativity of addition)} \\
+            c + S(a) && \text{(definition of addition)} \\
+            S(a) + c && \text{(commutativity of addition)}
+        \end{align*}
+        Now, we have shown the hypothesis of the $S(a)$ statement to be true. The condition of the $S(a)$ statement is true as outlined by 
+        the inductive assumption. Thus, we have used our inductive assumption to show that the $S(a)$ statment is true.
+        \spacing
+        
+        By induction, we have proven that for $a, b, c \in \N$, if $a + b = a + c$, then $b = c$ \qed
+    \end{paragraph}
+    
+    \bigskip
+
+    \begin{paragraph}{2)}
+        Let $a \in \N$
+        
+        \textbf{a) Proposition:} Show that $a + a = 2 \cdot a$ where $2$ is the symbol defined by $S(S(0))$.
+        \spacing
+
+        \textbf{Discussion:} We'll start this proof by inducting on $a$.
+        \spacing
+
+        First we'll show that the base case $a = 0$ is true using the definition of $+$ and $\times$.
+        \spacing
+
+        Then, we'll assume for $a \in \N$,
+        $$a + a = 2 \cdot a$$
+        We will show that for $S(a) \in \N$,
+        $$S(a) + S(a) = 2 \cdot S(a)$$
+
+        \textbf{Proof:} To prove the proposition, we'll use induction and induct on $a$.
+        \spacing
+
+        First, we'll show that the base case $a = 0$ holds true:
+        \begin{align*}
+            a + a \stackrel{?}{=} 2 \cdot a \\
+            0 + 0 \stackrel{?}{=} 2 \cdot 0 \\
+            0 \stackrel{?}{=} 2 \cdot 0 && \text{(definition of addition)}\\
+            0 = 0 && \text{(definition of multiplication)}
+        \end{align*}
+        Thus, we have shown the base case $a = 0$ to be true by using axiom 1.
+        \spacing
+
+        Now, we'll start with the inductive step and assume for $a \in \N$,
+        $$a + a = 2 \cdot a$$
+        We will show that for $S(a) \in \N$,
+        $$S(a) + S(a) = 2 \cdot S(a)$$
+
+        Before we start working the the $S(a)$ statement, it's worthwhile to note that
+        \begin{align}x + 1 = x + S(0) = S(x + 0) = S(x)\end{align}
+
+        Looking at the left hand side of the $S(a)$ statement, we can show the following
+        \begin{align*}
+            S(a) + S(a) \\
+            a + 1 + S(a) && \text{(by statement (1) above)} \\
+            (a + 1) + S(a) \\
+            S((a + 1) + a) && \text{(definition of addition)} \\
+            S(a + a + 1) && \text{(commutativity of addition)} \\
+            S(2 \cdot a + 1) && \text{(inductive assumption)} \\
+            (2 \cdot a + 1) + 1 && \text{(by statement (1))} \\
+            2\cdot a + 2 \\
+            2 \cdot (a + 1) && \text{(distributivity theorem)} \\
+            2 \cdot S(a) && \text{(by statement (1))} \\
+        \end{align*}
+        Thus, we have used our inductive assumption to show that the $S(a)$ statment is true.
+        \spacing
+        
+        By induction, we now know that for $a \in \N$, $a + a = 2 \cdot a$. \qed
+        \bigskip
+
+        \textbf{b) Proposition:} For the $n$-fold sum $a + \cdots + a = n \cdot a$.
+        \spacing
+
+        \textbf{Discussion:} We'll start by inducting over $n$ and showing that 
+        the base case $n = 0$ is true by using the definition and commutativity of multiplication.
+        For ease of notation, we will denote the $n$-fold sum as $a(n)$ such that $a$ is 
+        added to itself $n$ times i.e. $a(0) = 0$, $a(1) = a$, $a(2) = a + a$, etc.
+        \spacing
+
+        We'll then assume for $n \in \N$,
+        $$a(n) = n \cdot a$$
+        We will show that for $S(n) \in \N$,
+        $$a(S(n)) = S(n) \cdot a$$
+        using the fact that $n + 1$-fold sum of $a$ is equal to $a + $ n-fold sum of $a$.
+        \spacing
+
+        \textbf{Proof:} We will prove the proposition by using induction and inducting on $n$.
+        Note that for notation purposes, we will denote the $n$-fold sum as $a(n)$ such that $a$ is 
+        added to itself $n$ times i.e. $a(0) = 0$, $a(1) = a$, $a(2) = a + a$, etc.
+        \spacing
+
+        First, we'll show the base case $n = 0$ to be true.
+        \begin{align*}
+            a(n) \stackrel{?}{=} n \cdot a \\
+            a(0) \stackrel{?}{=} 0 \cdot a \\
+            0 \stackrel{?}{=} 0 \cdot a && \text{(the 0-fold sum of $a$ is just 0)} \\
+            0 \stackrel{?}{=} a \cdot 0 && \text{(commutativity of multiplication)} \\
+            0 = 0 && \text{(definition of multiplication)} \\
+        \end{align*}
+        Thus we have shown the base case $n = 0$ to be true by using axiom 1.
+        \spacing
+
+        Now, let's start with the indutive step and assume that for any $n \in \N$,
+        $$a(n) = n \cdot a$$
+        We will show that for $S(n) \in \N$,
+        $$a(S(n)) = S(n) \cdot a$$
+        Before we start working with the $S(n)$ statement, it's important to note that
+        \begin{align}x + 1 = x + S(0) = S(x + 0) = S(x)\end{align}
+        Now, we can look at the left side of the $S(n + 1)$ statement and show the following:
+        \begin{align*}
+            a(S(n)) \\
+            a(n + 1) && \text{(by statement (2) above)} \\
+            a + a(n) \\
+            a + (n \cdot a) && \text{(inductive assumption)} \\
+            a + (a \cdot n) && \text{(commutativity of multiplication)} \\
+            a + 0 + (a \cdot n) && \text{(definition of addition)} \\
+            a + (a \cdot 0) + (a \cdot n) && \text{(definition of multiplication)} \\
+            a \cdot (S(0)) + (a \cdot n) && \text{(definition of multiplication)} \\
+            a \cdot 1 + a \cdot n && \text{(definition of S(0))} \\
+            a \cdot (1 + n) && \text{(distributivity theorem)} \\
+            a \cdot (n + 1) && \text{(commutativity of addition)} \\
+            a \cdot S(n) && \text{(by statement (2))} \\
+            S(n) \cdot a && \text{(commutativity of multiplication)} \\
+        \end{align*}
+        Thus, we have proven the $S(n)$ statement using our inductive assumption.
+        \spacing
+
+        By induction, we now know that for $n \in \N$, the $n$-fold sum $a + \cdots + a = n \cdot a$. \qed
+    \end{paragraph}
+
+    \begin{paragraph}{3)}
+        \textbf{a) Proposition:} Let $a, b, c \in \N$ and $a = b \cdot c$. Show that $b \leq a$.
+        \spacing
+
+        \textbf{Proof:} To prove that $b \leq a$, we'll start with the given that $a = b \cdot c$.
+        From question 2, we know that $b \cdot c = b + \cdot b$ where $b + \cdot + b$ is the c-fold sum.
+        Since $a$ is equal to sum of many $b$ parts, we can say that $a$ is greater than the sum of one of those
+        $b$ parts. This is the same as stating that $b \leq a$. \qed
+        \bigskip
+
+        \textbf{b) Proposition:} Let $a \in \N$. Show that $a \leq a$.
+        \spacing
+
+        \textbf{Proof:} By the definition of addition, $a + 0 = a$. From this, it's easy to see that $a \leq a$. \qed
+        \bigskip
+
+        \textbf{c) Proposition:} $a \leq b \land b \leq c \Rightarrow a \leq c$
+        \spacing
+
+        \textbf{Proof:} We'll start by assuming that $a \leq b$ and $b \leq c$. We can rewrite them as 
+        $a - b \leq 0$ and $b - c \leq 0$. Adding these two inequalities, we get $a - b + b - c \leq 0$.
+        This can be simplified to $a - c \leq 0$ which is equivalent to $a \leq c$ \qed
+        \bigskip
+
+        \textbf{d) Proposition:} $a \leq b \land b \leq a \Rightarrow a = b$.
+        \spacing
+
+        \textbf{Proof:} Let there be a $c, d \in \N$ such that $a + c = b$ and $b + d = a$. Substituiting $b$
+        from the first equation to the second, we get that $a + c + d = a$. This is equivalent to 
+        $a + c + d = a + 0$. From what we proved in part (a), we can rewrite that as $c + d = 0$. Since 
+        $c, d \in \N$, axiom 7 prevents $c$ or $d$ from being anything but 0. This can be shown through a proof of
+        contradiction. Assume that $c \neq 0$. This implies that since $c \in n$, there's some $x \in \N$ such that
+        $S(x) = c$. That means that $S(x) + d = 0$. This is the same as $d + S(x) = 0$ by the commutativity of addition,
+        and axiom 7 prevents this statement from ever being true, so $c = 0$. This would mean that $a + c = b$
+        can be rewritten as $a + 0 = b$ which is equivalent to $a = b$ by the definition of addition. Thus, 
+        we have prove that if $a \leq b$ and $b \leq a$, then $a = b$. \qed
+        \bigskip
+
+        Full disclosure, I am the least confident on the last problem of this set. I tried to think
+        of ways to work up to what needed to be proved using the axioms and induction, but after hours of head scratching
+        and a lot of scratch paper, I had to rely heavily on intution and create what seems to me as 
+        huge logical leaps from axioms to statements to supply the proofs. I'm looking forward
+        to see how the proofs for these statements are formualted, and I would greatly appreciate any advice
+        on how I can tackle a problem similar to this in the future.
+    \end{paragraph}
+\end{document}
