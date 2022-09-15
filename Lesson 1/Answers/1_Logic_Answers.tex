@@ -1,0 +1,298 @@
+\input{C:/Code Projects/Caltech Math 0/preamble.tex}
+
+\begin{document}
+
+	\begin{center}  
+
+		\huge \sc Lesson 1 Solutions 
+		
+	\end{center}
+
+	\begin{paragraph}{1)}
+		Let $m \not = 0$ and b be real numbers. Show that there exists a unique $x$ such that $mx + b = 0$. \spacing
+
+		\separate\spacing
+
+		\textbf{Propsition:} $\exists!x$ $mx + b = 0$ \spacing
+		
+		\textbf{Discussion:} First we will show that there is an $x$ that solves $mx + b = 0$ by solving 
+		the equation algebraically. Then we will show that it's the only 
+		solution by assuming there are are two solutions, $x$ and $y$, 
+		and show that $x=y$. \spacing
+		
+		\textbf{Proof.} Solving $mx + b = 0$ algebraically, first we subtract $b$ from each side to get $mx = -b$. 
+		Diving $m$ by both sides, we get that $x = \frac{-b}{m}$. 
+		Plugging this $x$ back into $mx + b = 0$ yields $m(\frac{-b}{m}) + b = -b + b = 0$, so we see this $x$ satisfies $mx + b = 0$.
+		To show that this $x$ is unique, let's assume $x$ and $y$ both satisfy
+		$mx + b = 0$. If $mx + b = 0$ and $my + b = 0$, then $mx + b = my + b$.
+		Subtracting b from both sides, $mx = my$, and when we divide both sides by $m$, we get that
+		$x = y$. Thus, there exists a unique $x$ that satisfies $mx + b = 0$. 
+
+		\proofEnd
+	
+	\end{paragraph}
+
+	\begin{paragraph}{2)}
+		Prove the following biconditional statement.
+ 		\begin{center}	
+			Let x be a real number. $-1 \leq x \leq 1$ if and only if $x^2 \leq 1$.
+		\end{center}
+		In proving this, it may be helpful to note that $-1 \leq x \leq 1$ is equivalent to $-1 \leq x$ and $x \leq 1$. \spacing
+
+		\separate\spacing
+
+		\textbf{Propsition:} $-1 \leq x \leq 1 \iff x^2 \leq 1$ \spacing
+		
+		\textbf{Discussion:} We'll break up this biconditional statement
+		into $p \Rightarrow q:$ ``If $x$ is between $-1$ and $1$, then $x^2$ is 
+		less than or equal to $1$", and $q \Rightarrow p:$ ``If $x^2$ is less
+		than or equal to $1$, then $x$ is between $-1$ and $1$ (inclusive)." \spacing
+
+		\leftIndent The first statement can be proven easily 
+		by recognizing that p is a conjunction: $-1 \leq x \cap x \leq 1$.
+		Since p is assumed to be true, each part of the conjuction is also 
+		true. As such, we can work with each piece of the conjuction and
+		prove that q is true for each piece, thus being true for p.
+		Put another way, if we can show that $(-1 \leq x \Rightarrow x^2 \leq 1) 
+		\cap (x \leq 1 \Rightarrow x^2 \leq 1)$, then we prove that 
+		$p \Rightarrow q$. \spacing
+
+		\leftIndent The second statement is a little trickier to prove
+		since the hypothesis gives us information about $x^2$ and not $x$.
+		The best way to get information about $x$ would be to use the contrapositive
+		i.e. $\neg p \Rightarrow \neg q:$ ``If $x$ is not between $-1$ and $1$ (exclusive),
+		then $x^2 > 1$." That is, we need to prove that $(x < -1 \cup
+		x > 1) \Rightarrow x^2 > 1.$ Similar to the first statement, 
+		since the hypothesis is a disjunction assumed to be true, each
+		part of the disjunction can also be assumed to be true. We can show that $\neg q$ is true
+		for each part of the disjunction, which proves $\neg p \Rightarrow \neg q$, 
+		proving the second statement by proving the contrapositive. \spacing
+
+
+		\textbf{Proof:} To prove the biconditional statement, we'll prove 
+		two conditional statements \spacing
+
+		\leftIndent The first statement $p \Rightarrow q$: ``If $x$ is between $-1$ and $1$, then $x^2$ is 
+		less than or equal to $1$", can be proven by proving that q is true for each part of 
+		the conjunction ($-1 \leq x \cap x \leq 1$) in the hypothesis. For the first part of the conjuction,
+		we assume that $-1 \leq x$. Mulipling each side of the 
+		inequality by $-1$ flips the inequality to $-x \leq 1$.
+		Multiplying $-x \leq 1$ by itself won't change the sign and will instead yield
+		$-x * -x \leq 1 * 1$ which is equivalent to $x^2 \leq 1$. For the second part of the
+		conjunction, we assume that $1 \leq x$. Multiplying the inequality by itself won't change the sign
+		and yields $1 * 1 \leq x * x$ which is equivalent to $x^2 \leq 1$.
+		This proves the first statement.\spacing
+
+		\leftIndent The second statement, $q \Rightarrow p:$ ``If $x^2$ is less
+		than or equal to $1$, then $x$ is between $-1$ and $1$ (inclusive)", can be proven
+		by proving the contrapositive, $\neg p \Rightarrow \neg q:$ ``If $x$ is not between $-1$ and $1$ (exclusive),
+		then $x^2 > 1$." Put another way, we can prove that $(x < -1 \cup
+		x > 1) \Rightarrow x^2 > 1$ by applying the same logic we did to the first statement i.e. proving 
+		$\neg q$ to be true with each part of the disjunction. For the first part of the disjunction, 
+		we assume that $x < -1$. Multipling each side of the inequality by $-1$
+		flips the inequality to $-x > 1$. Multipling $-x > 1$ by itself won't change
+		the sign of the inequality and yields $-x * -x > 1 * 1$ which is equivalent to $x^2 > 1$.
+		For the second part of the disjunction, we assume that $x > 1$. Multiplying this inequality by 
+		itself yields $x * x > 1 * 1$ which is equivalent to $x^2 > 1$. This proves the contrapositive
+		$\neg p \Rightarrow \neg q$ which proves $q \Rightarrow p$. \spacing
+
+		Since both $p \Rightarrow q$ and $q \Rightarrow p$ are proven to be true, the biconditinal statement
+		``$-1 \leq x \leq 1$ if and only if $x^2 \leq 1$" is true. 
+		
+		\proofEnd
+
+	\end{paragraph}
+
+	\begin{paragraph}{3)}
+		Two whole numbers are said to have the same parity if they are both even or both odd. Prove the following biconditional statement:
+		\begin{center}
+			Let m and n be whole numbers. $m$ and $n$ have the same parity if and only if $m + n$ is even.
+		\end{center}
+
+		\separate\spacing
+
+		\textbf{Proposition:} $m$ and $n$ have the same parity $\iff (m + n) \equiv 0$ (mod $2$)\spacing
+
+		\textbf{Discussion:} To prove the biconditional statement, we need to prove the two 
+		statements $p \Rightarrow q:$ ``If $m$ and $n$ have the same parity, then $m + n$ is even."
+		and $q \Rightarrow p:$ ``If $m + n$ is even, then $m$ and $n$ have the same parity.'' \spacing
+
+		\leftIndent The first statement is relatively easy to prove because
+		we're already assuming that $m$ and $n$ have the same parity. We can look 
+		at two cases: $m$ and $n$ are both even, or $m$ and $n$ are both odd.
+		If $m$ and $n$ are both even, then we can represent them as 
+		$2k$ and $2l$, respectively, where $k \in \N$ and $l \in \N$. 
+		Adding $2k$ and $2l$ together yields $2k + 2l = 2(k + l)$ which is divisible by $2$, 
+		therefore making the sum even. If $m$ and $n$ are both odd, then we can represent them as
+		$2k + 1$ and $2l + 1$, respectively, where $k \in \N$ and
+		$l \in \N$. Adding $2k + 1$ and $2l + 1$ yields 
+		$2k + 2l + 2$ which is divisible by $2$, therefore making the sum even.
+		In both cases where $m$ and $n$ had the same parity, $m + n$
+		was even, therefore proving $p \Rightarrow q$. \spacing
+
+		\leftIndent The second statement is a little tricker to prove in its current form
+		because its difficult to extract information about $m$ and $n$ from
+		$m + n$, so it'd be useful to prove the contrapositive instead.
+		The contrapositive is $\neg p \Rightarrow \neg q:$ ``If $m$ and $n$
+		don't have the same parity, then $m + n$ is odd''. This is much easier 
+		to prove. We can represent $m$ and $n$ as $2k$ and $2l + 1$ where
+		$k \in \N$ and $l \in \N$. The order of this assignment doens't matter,
+		as long as both numbers have different parities, because addition is
+		commutative. Adding $2k$ and $2l + 1$ yields $2k + 2l + 1$ which will always be odd.
+		This proves the contrapositive which then proves $q \Rightarrow p$. \spacing
+
+		\leftIndent Since we proved both conditional statements, the 
+		biconditional statement ``If $m$ and $n$ have the same parity,
+		then $m + n$ is even'' is proven true. \spacing
+
+		\textbf{Proof:} To prove the biconditional statement, we will prove two conditional statements.\spacing
+
+		\leftIndent The first statement $p \Rightarrow q:$ ``If $m$ and $n$ have the same parity, then $m + n$ is even"
+		can be proven by analyzing the two cases that arise from assuming the hypothesis to be true. 
+		If $m$ and $n$ have the same parity, then either $m$ and $n$ are both odd or both even. \
+
+		\begin{itemize}
+			\item{
+				\textbf{$\mathbf{\textit{m}}$ and $\mathbf{\textit{n}}$ are even:} Since both are even, we can represent them as 
+				$2k$ and $2l$, respectively, where $k \in \N$ and $l \in \N$. Adding these two
+				expressions yields $m + n = 2k + 2l = 2(k+l)$. No matter what $k$ and $l$ are, 
+				multiplying $k + l$ by $2$ makes it divisible by two 
+				($\frac{m + n}{2} = \frac{2(k + l)}{2} = k + l \equiv 0$ (mod $2$)) and therefore even. 
+				This proves that if $m$ and $n$ are even, then $m + n$ is even.
+			}
+		
+			\item{
+				\textbf{$\mathbf{\textit{m}}$ and $\mathbf{\textit{n}}$ are odd:} If $m$ and
+				$n$ are odd, then they can be represented as $2k + 1$ and $2l + 1$, respectively,
+				where $k \in \N$ and $l \in \N$. Adding these two expressions yields 
+				$m + n = 2k + 1 + 2l + 1 = 2k + 2l + 2 = 2(k + l + 1)$. If we divide the sum by $2$,
+				$\frac{m + n}{2} = \frac{2(k + l + 1)}{2} = k + l + 1 \equiv 0$ (mod $2$), then we can see that is is divisible
+				by $2$ and therefore even. This proves that when  $m$ and $n$ are odd, then $m + n$ is even.
+			}
+		\end{itemize}
+
+		\begin{flushleft}
+			Now that we've proved both cases, we can say that the first statement $p \Rightarrow q$ is true.
+		\end{flushleft}
+
+		\leftIndent The second statement $q \Rightarrow p$ will be proven by proving the contrapositive statement
+		$\neg p \Rightarrow \neg q:$ ``If $m$ and $n$ don't have the same parity, then $m + n$ will be odd.'
+		Since $m$ and $n$ are of different parities, one of them is odd and one of them is even. That means that 
+		they can be represented as $2k$ and $2l + 1$, where $k \in \N$ and $l \in \N$, in no particular order because 
+		addition is commutative (and it doesn't matter whether $m$ or $n$ is odd). Adding these two yields
+		$m + n = 2k + 2l + 1$. When diving this sum by 2, $\frac{m + n}{2} = \frac{2k + 2l + 1}{2} \equiv 1$ (mod $2$),
+		it's clear that the sum is not divisible by two and therefore odd. This proves the contrapositive $\neg p \Rightarrow \neg q$
+		which then proves $q \Rightarrow p$. \spacing
+		
+		Now that we have proved that $p \Rightarrow q$ and $q \Rightarrow p$, we have proved the biconditional statement
+		$p \iff q$ that ``$m$ and $n$ have the same parity if and only if $m + n$ is even.'' 
+		
+		\proofEnd
+	
+	\end{paragraph}
+
+	\begin{paragraph}{4)}
+		Use proof by contrapositive to prove the following conditional statement.
+ 		\begin{center}
+			Let $m$ and $n$ be whole numbers. If $m * n$ is odd, then $m$ and $n$ are both odd.
+		\end{center}
+		
+		\separate\spacing
+
+		\textbf{Proposition:} $m * n \equiv 1$ (mod $2$) $\Rightarrow m \equiv 1$ (mod $2$) $\cap$ $n \equiv 1$ (mod $2$) \spacing
+
+		\textbf{Discussion:} Since our hypothesis gives us information about $m * n$ and not $m$ or $n$, it would 
+		be useful to work with the contrapositive $\neg q \Rightarrow \neg p$ which states ``If either $m$ or $n$ is even,
+		then $m * n$ is even.'' This statement is much easier to prove because if we're assuming one of the numbers to be even,
+		then it can be written as $2k$ where $k \in \N$. Irregardless of $n$'s parity, the resulting product will be divisible by two
+		and therefore even. Proving the contrapositive proves the original statement. 
+		 
+		\textit{We will assume:} $m$ or $n$ is even
+		 
+		\textit{We will prove:} $m * n$ is even. \spacing
+
+		\textbf{Proof:} To prove the statement, we will prove the contrapositive $\neg q \Rightarrow \neg p$
+		that states ``If either $m$ or $n$ is even, then $m * n$ is even.'' We're assuming that at 
+		least one of the numbers is even, so let's take $m$ to be even for now. If $m$ is even, then
+		it can be represented as $2k$ where $k \in \N$. Multiplying $m$ with $n$ yields 
+		$m * n = 2k * n = 2 * (k * n)$. Dividing this expression with 2, $\frac{m * n}{2} = 
+		\frac{2 * (k * n)}{2} = k * n \equiv 0$ (mod $2$), shows that not only do
+		we get a product that is divisible by $2$ and therefore even, but that the parity of $n$ does not matter.
+		This process can recreated again if we take just $n$ to be even or both $m$ and $n$ to be even. 
+		This proves the contrapositive $\neg q \Rightarrow \neg p$ which then proves the original 
+		statement that ``If $m * n$ is odd, then $m$ and $n$ are both odd.''
+
+		\proofEnd
+
+	\end{paragraph}
+
+	\begin{paragraph}{5)}
+		We will investigate the following statement:
+		
+		\begin{center}
+			Every odd whole number can be written as the difference of two perfect
+			squares.
+		\end{center}
+
+		(a)  For the odd whole numbers n = -3,-1,1,3,5,7,9, write n as the difference of two perfect squares. \spacing
+		
+		(b)  Use any pattern that you found in (a) to help you write a proof of our statement.
+	
+		\separate\spacing
+
+		\textbf{a)}
+		\begin{center}
+		\begin{tabular}{||c | c||}
+			
+			\hline
+			n & Difference of squares \\[0.5ex]
+			\hline\hline
+			-$3$ & $1^2 - (-2)^2$ \\
+			\hline 
+			-$1$ & $0^2 - (-1)^2$ \\
+			\hline 
+			$1$ & $1^2 - 0^2$ \\
+			\hline 
+			$3$ & $2^2 - 1^2$ \\
+			\hline 
+			$5$ & $3^2 - 2^2$ \\
+			\hline 
+			$7$ & $4^2 - 3^2$ \\
+			\hline 
+			$9$ & $5^2 - 4^2$ \\
+			\hline 
+		\end{tabular}
+	\end{center}
+	\end{paragraph}
+
+	\pagebreak
+
+	\textbf{b) Proposition:} Every odd whole number can be written as the 
+	difference of two perfect squares. \spacing
+
+	\textbf{Discussion:} After filling out the table with a few
+	odd numbers and their corresponding difference of perfect squares, I
+	notices that all the perfect squares were created from consecutive whole
+	numbers. Even the negative odd numbers continue this progression if you
+	rewrite the second number as a negative (gets turned positive when squaring it).
+	This pattern is what I honed in on to show that every odd number can 
+	be written as a difference of perfect squares, and I will show this pattern 
+	by demonstrating how $2k + 1$, where $k \in \N$, can be rewritten algebraically as a difference
+	of perfect squares. \spacing
+	
+	\textit{We will assume:} We're starting an odd whole number
+
+	\textit{We will prove:} Every odd whole number can be expressed as a difference of perfect squares \spacing
+
+	\textbf{Proof:} Since we're starting with an odd whole number, we can express 
+	that as $2k + 1$ where $k \in \N$. The expression can be rewritten as follows:
+	$2k + 1 = 2k + 1 + k^2 - k^2$. After reordering the terms a bit, we get
+	$2k + 1 = k^2 + 2k + 1 - k^2$. The first three terms on the right side 
+	of the equation are the expanded form of the square of a binomial, so it can 
+	be condensed to $2k + 1 = (k + 1)^2 - k^2$. From this form, it becomes evident
+	that $2k + 1$ (the odd number) is written as the difference between the square 
+	of $k + 1$ and $k$. This proves that every odd whole number can be written as the 
+	difference between two perfect squares.
+
+	\proofEnd
+\end{document}

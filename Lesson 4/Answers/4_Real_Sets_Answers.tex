@@ -1,0 +1,195 @@
+\input{C:/Code Projects/Caltech Math 0/preamble.tex}
+
+\begin{document}    
+
+    \begin{center}
+        \huge \sc Lesson 4 Solutions
+    \end{center}
+
+    \begin{paragraph}{1)}
+
+        \textbf{Proposition:} Let $a, b \in \Z$. $4 \mid a^2 - b^2 \iff a$ and $b$ are of the same parity.
+        \spacing
+
+        \textbf{Discussion:} To prove the proposition, we need to prove that 
+        $p \Rightarrow q$: ``$4 \mid a^2 - b^2 \Rightarrow a$ and $b$ are of same parity'',
+        and $q \Rightarrow p$: ``$a$ and $b$ are the same parity $\Rightarrow 4 \mid a^2 + b^2$''.
+        \spacing
+
+        To prove the first statement, we'll prove the contrapositive
+        since that gives us information about $a$ and $b$. Defining $a$ and 
+        $b$ as $2m$ and $2n +1$ (the order doesn't matter since they just
+        have to be of different parity) where $m, n \in \Z$. From there, 
+        we can plug that in to $a^2 - b^2$ and see how we get an expression resulting in 
+        $4x + 1$ (we will show $x \in \Z$). This makes it not divisibile by 4 which 
+        make the first statement true.
+        \spacing
+
+        To prove the second statement, we'll look at two cases. When $a$ and $b$
+        are both even, we can rewrite them as $2m$ and $2n$ where $m, n \in \Z$ and simplify
+        $a^2 - b^2$ to get an expression that is divisible by 4. A very similar process is applied
+        when $a$ and $b$ are both odd, except now, they're defined as $2m + 1$
+        and $2n + 1$ where $m, n \in \Z$.
+        \spacing
+
+        \textbf{Proof:} To prove that ``$4 \mid a^2 - b^2 \iff a$ and $b$ are of the same parity'',\\ 
+        we will need to prove the two conditional statements $p \Rightarrow q$: ``$4 \mid a^2 - b^2 \Rightarrow a$
+        and $b$ are of the same parity'' and $q \Rightarrow p$: ``$a$ and $b$ are of the same parity $\Rightarrow 4 \mid a^2 - b^2$''.
+        \spacing
+
+        To prove $p \Rightarrow q$, we will prove the contrapositive $\neg q \Rightarrow \neg p$ which states
+        ``$a$ and $b$ are not of the same parity $\Rightarrow 4 \nmid a^2 - b^2$''. Since $a$ and $b$ are not 
+        of the same parity, we can define them as $a = 2m + 1$ and $b = 2n$ where $m, n \in \Z$. Thus,
+        $$a^2 - b^2 = (2m + 1)^2 - (2n)^2 = 4m^2 + 4m + 1 - 4n^2 = 4(m^2 + m - n^2) + 1$$.
+        Since $m, n \in \Z$, we can say that $m^2 + m - n^2 \in \Z$. Since we have shown that $a^2 - b^2$
+        is in the form of $4x + 1$, we have shown that $4 \nmid a^2 - b^2$. We have now proven the contrapositive
+        which means we have proven the original statement $p \Rightarrow q$.
+        \spacing
+
+        To prove $q \Rightarrow p$, we'll start by looking at two cases.
+
+        \begin{itemize}
+            \item{
+                \textbf{$a$ and $b$ are even:} We can rewrite $a$ and $b$ as $a = 2m$ and 
+                $b = 2n$ where $m, n \in \Z$. Thus,
+                $$a^2 - b^2 = (2m)^2 - (2n)^2 = 4m^2 - 4n^2 = 4(m^2 - n^2)$$
+                Since $m, n \in \Z$, $m^2 - n^2 \in \Z$. Therefore, 
+                when $a$ and $b$ are even, $4 \mid a^2 - b^2$
+            }
+
+            \item{
+                \textbf{$a$ and $b$ are odd:} We can rewrite $a$ and $b$ as $a = 2m + 1$ and 
+                $b = 2n + 1$ where $m, n \in \Z$. Thus,
+                $$a^2 - b^2 = (2m + 1)^2 - (2n + 1)^2 = 4m^2 +4m +1  - 4n^2 -4n -1 = 4m^2 + 4m - 4n^2 -4n = 4(m^2 + m - n - n^2)$$
+                Since $m, n \in \Z$, $m^2 + m - n - n^2 \in \Z$. Therefore, 
+                when $a$ and $b$ are odd, $4 \mid a^2 - b^2$
+            }
+        \end{itemize}
+        
+        By reaching the same conclusion at the end of both cases, we have proved the original staement 
+        $q \Rightarrow p$ by showing how when $a$ and $b$ are of the same parity, $4 \mid a^2 - b^2$.
+        \spacing
+
+        Now that we've proved both $p \Rightarrow q$ and $q \Rightarrow p$, we have proved $p \iff q$
+        which states that $4 \mid a^2 - b^2 \iff a$ and $b$ are of the same parity.
+        
+        \proofEnd
+    \end{paragraph}
+
+    \pagebreak
+
+    \begin{paragraph}{2)}
+        \textbf{a) Proposition:} Let $a \in \Z$. Show $3 \mid a \iff 3 \mid a^2$.
+        \spacing
+
+        \textbf{Discussion:} To prove the proposition, we need to prove 
+        ``$3 \mid a \Rightarrow 3 \mid a^2$'' and ``$3 \mid a^2 \Rightarrow 3 \mid a$''.
+        \spacing
+
+        To prove the first statement, we'll start by recognizing that since $3 \mid a$,
+        $a = 3k$ where $k \in \Z$. Now, we can look at $a^2$ and see that it produces 
+        a form that is divisible by 3, and so the first statement is true.
+        \spacing
+        
+        To prove the second statement, we will prove the contrapositive: ``$3 \nmid a \Rightarrow 3 \nmid a^2$''
+        since that gives us information about $a$. Since $3 \nmid a$, we can write $a$ as 
+        $a = 3m + 1$ or $a = 3m + 2$ where $m \in \Z$. We can take each expression of $a$
+        and square it to get an expression that isn't divisible by 3, thus proving the second
+        statement.
+        \spacing
+
+        \textbf{Proof:} To prove $3 \mid a \iff 3 \mid a^2$, we need to prove that 
+        ``$3 \mid a \Rightarrow 3 \mid a^2$'' and ``$3 \mid a^2 \Rightarrow 3 \mid a$''.
+        \spacing
+
+        To prove the first statement, since $3 \mid a$ there is some $k \in \Z$ such that 
+        $a = 3k$. Thus, $a^2 = (3k)^2 = 9k^2 = 3(3k^2)$. Since $k \in \Z$, we can say that 
+        $3k^2 \in \Z$. Thus, $3 \mid a^2$ proving the first statement.
+        \spacing
+
+        To prove the second statement, we will prove the contrapositive: ``$3 \nmid a \Rightarrow 3 \nmid a^2$''.
+        Since $3 \nmid a$, there is some $k \in \Z$ such that $a = 3k + 1$ or $a = 3k+2$.
+        Let's look at both ways of expressing $a$:
+        $$a^2 = (3k + 1)^2 = 9k^2 + 6k + 1 = 3(3k^2 + 2k) + 1$$
+        $$a^2 = (3k + 2)^2 = 9k^2 + 12k + 4 = 3(3k^2 + 4k + 1) + 1$$
+        Since $k \in \Z$, we know that $3k^2 + 2k \in \Z$ and $3k^2 +4k + 1 \in \Z$.
+        Since we're able to write $a^2$ in the form of $3x + 1$ or $3x + 2$ (where $x \in \Z$),
+        we can say that $3 \nmid a^2$ as desired, proving the contrapositive. Thus, we have proven the 
+        original second statement.
+        \spacing
+
+        Now that we've proven that ``$3 \mid a \Rightarrow 3 \mid a^2$'' and ``$3 \mid a^2 \Rightarrow 3 \mid a$',
+        we can say that we've proven $3 \mid a \iff 3 \mid a^2$.
+        \proofEnd\bigskip
+
+        \textbf{b) Proposition:} $\sqrt{3}$ is irrational
+        \spacing
+
+        \textbf{Discussion:} We'll use a proof by contradiction and start
+        by assuming that $\sqrt{3}$ is rational and can be expressed 
+        as $\frac{p}{q}$ where $p, q \in \Z$ and $p$ and $q$ share no
+        common divisors. We'll use the conclusion from (a) to show that 
+        $p$ and $q$ have a common divisor of 3 which contradicts the original 
+        statement of them having no common divisors proving that $\sqrt{3}$
+        is irrational.
+        \spacing
+
+        \textbf{Proof:} Assume, to the contrary, that $\sqrt{3}$ is rational. We
+        can express it as $$\sqrt{3} = \frac{p}{q}$$ where 
+        $p, q \in \Z$ and they share no common divisors. 
+        \spacing
+        
+        From here, we can square both sides to get $$3 = \frac{p^2}{q^2}$$ which can
+        be written as $3q^2 = p^2$. Since $p^2$ is written as $3$ times
+        an integer ($q \in \Z$ so $q^2 \in \Z$), we know that $3 \mid p^2$.
+        From (a), we then know that $3 \mid p$. If $3 \mid p$, when we can write 
+        $p$ as $3k$ for some $k \in \Z$. Thus,
+        $$p^2 = 3q^2$$
+        $$(3k)^2 = 3q^2$$
+        $$9k^2 = 3q^2$$
+        $$3k^2 = q$$
+
+        Since we were able to write $q$ as the product of $3$ and 
+        another integer ($k \in \Z$ so $k^2 \in \Z$), we know that 
+        $3 \mid q^2$. From (a), we then know that $3 \mid q$. Since 
+        $3 \mid p$ and $3 \mid q$, $p$ and $q$ share a common divisor of 3
+        which contradicts the original assumption of $p$ and $q$ having
+        no divisors in common. 
+        \spacing
+
+        Thus, our initial assumption of $\sqrt{3}$ being rational must 
+        be false, so $\sqrt{3}$ is indeed irrational. 
+        \proofEnd
+    \end{paragraph}
+
+    \bigskip
+
+    \begin{paragraph}{3)}
+        \textbf{Proposition:} Let $a, b \in \R$. Show $a + b \in \Q \Rightarrow a \in \R - \Q$ or $b \in \Q$
+        \spacing
+
+        \textbf{Discussion:} To prove the propsotion, we will prove the contrapositive so that 
+        we have information about $a$ and $b$. The contrapositive states that ``If $a$ is rational 
+        and $b$ is irrational, then $a + b$ is irrational''. Put another way, we need to 
+        prove ``$a \in \Q$ and $b \in \R - \Q \Rightarrow a + b \in \R - \Q$''.
+        
+        We'll start by letting $a \in \Q$ and $b \in \R - \Q$ and use a proof of contradiction.
+        We'll assume that $a + b$ is rational and show how a contradiction arises.
+        \spacing
+
+        \textbf{Proof:} We will prove the proposition by proving the contrapositive that states
+        ``$a \in \Q$ and $b \in \R - \Q \Rightarrow a + b \in \R - \Q$''. 
+        \spacing
+
+        Assume, to the contrary, that $a + b \in \Q$. Since $a \in \Q$, it's additive 
+        inverse $-a$ exists and $-a \in \Q$. Since $-a$ and $a + b$ are rational numbers, 
+        their sum is also a rational number. Thus,
+        $$(-a) + (a + b) = -a + a + b = b$$
+
+        is rational which contradicts the irrationality of $b$ which means our assumption of $a + b \in \Q$ was false. Thus,
+        $a + b \in \R - \Q$. This proves the contrapositive which then proves our original statement:
+        ``If $a + b$ is rational, then $a$ is irrational or $b$ is rational''.
+
+        \proofEnd
+    \end{paragraph}
+\end{document}

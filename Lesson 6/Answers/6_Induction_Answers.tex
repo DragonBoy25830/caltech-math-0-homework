@@ -1,0 +1,198 @@
+\input{C:/Code Projects/Caltech Math 0/preamble.tex}
+
+\begin{document}
+    \begin{center}
+        \huge\sc{Lesson 6 Solutions}
+    \end{center}
+
+    \begin{paragraph}{1)}
+        \textbf{Proposition:} Let $r \neq 1$. Show that $\sum_{j=0}^n r^j = \frac{1-r^{n + 1}}{1-r}$.  
+        \spacing    
+        
+        \textbf{Discussion:} Since our summation is indexed by real numbers and it seems that we 
+        can relate $k$ to $k + 1$ using exponent properties, a proof of induction would be useful here.
+        \spacing
+        
+        \begin{itemize}
+            \item{
+            Identify $A(n)$: $A(n)$ is the statement that $\sum_{j=0}^n r^j = \frac{1 - r^{n + 1}}{1 - r}$
+            }
+            
+            \item{
+            Base Case: We'll show that A(0) is true which makes sense because the summation
+            of $r^0$ is just equal to $1$
+            }
+            
+            \item{
+            Inductive Step: We'll assume that for $k \in \N$, $$\sum_{j=0}^{k}r^j = \frac{1 - r^{k+1}}{1 - r}$$ We will show that $A(k + 1)$ is also true by showing that $$\sum_{j=0}^{k + 1} r^j = \frac{1-r^{(k + 1) + 1}}{1-r}$$
+            }
+        \end{itemize}
+        \spacing
+
+        \textbf{Proof:} We will use a proof by induction to prove the statement $A(n)$ given by 
+        $\sum_{j=0}^{n} r^j = \frac{1 - r^{n+1}}{1-r}$ for all $n \in \N$.
+        \spacing
+        
+        First, we'll prove the base case $A(0)$ to be true. Computing $A(0)$, we get
+        $$\sum_{j=0}^{0} r^j= \frac{1 - r^{0+1}}{1-r} = \frac{1-r}{1-r} = 1$$
+        Since $r^0 = 1$, we can see that $A(0)$ is true.
+        \spacing
+        
+        Now, we'll start with the inductive step. We'll assume for $k \in \N$, $A(k)$ is true.
+        That is,
+        $$\sum_{j=0}^{k} r^j = \frac{1 - r^{k+1}}{1-r}$$
+        We will show that $A(k + 1)$ is true by showing that 
+        $$\sum_{j=0}^{k + 1} r^j = \frac{1 - r^{(k + 1)} + 1}{1 - r}$$
+        Looking at the left side of the $A(k + 1)$ statement, we can use our inductive
+        assumption to show the following:
+        $$\sum_{j=0}^{k+1} r^j = (\sum_{j=0}^{k} r^j) + r^{k+1} = (\frac{1 - r^{k+1}}{1-r}) + r^{k+1} = \frac{1 - r^{k+1}}{1-r} + \frac{r^{k+1}(1-r)}{1-r} = \frac{1-r^{k+1} + r^{k+1} - r\cdot r^{k+1}}{1-r} =$$
+        $$\frac{1 - r^{(k + 1) + 1}}{1-r}$$
+        Thus, we have used our inductive assumption to show that $A(k+1)$ is true.
+        \spacing
+        
+        By induction, we now know that the statement $A(n)$ given by $\sum_{j = 0}^{n} = \frac{1 - r^{n+1}}{1-r}$ is true for all $n \in \N$. \\
+        \proofEnd
+        
+    \end{paragraph}
+
+    \bigskip    
+
+    \begin{paragraph}{2)}
+        Consider $f(x) = \frac{1}{1-x}$
+        \spacing
+
+        \textbf{a)} Computer the first several derivatives of $f$ and use them to conjecture a pattern for $f^{(n)}(x)$.\\
+        \separate
+        \begin{center}
+            \begin{tabular}{||c | c||}
+                \hline
+                $n$ & $f^{(n)}(x)$ \\ [0.5ex]
+                \hline\hline
+                0 & $(1 - x)^{-1}$ \\
+                \hline
+                1 & $-(1 - x)^{-2}$ \\
+                \hline
+                2 & $2(1 - x)^{-3}$ \\
+                \hline
+                3 & $-6(1 - x)^{-4}$ \\
+                \hline
+                4 & $24(1 - x)^{-5}$ \\
+                \hline
+            \end{tabular}
+            \spacing
+
+            Conjecture: $f^{(n)}(x) = (-1)^n n!(1-x)^{-(n + 1)}$
+        \end{center}
+        
+        \bigskip
+        
+        \textbf{b) Proposition:} Let $x \neq 1$. Show that $f^{(n)}(x) = (-1)^n n!(1 - x)^{-(n + 1)}$ for $n \in \N$
+        \spacing
+        
+        \textbf{Discussion:} Since the proposition is indexed by natural numbers and it seems that
+        we can use factorial and exponent properties to relate $k$ to $k + 1$, a proof by induction would work well 
+        here.
+        \begin{itemize}
+            \item{
+                Identify $A(n)$: $A(n)$ is the statement that $f^{(n)}(x) = (-1)^n n!(1 - x)^{-(n + 1)}$
+            }
+
+            \item{
+                Base Case: We'll show that $A(0)$ is true by using the fact that the 0-th derivative of a function is just the function itself
+            }
+
+            \item{
+                Inductive Step: We'll assume that for some $k \in \N$,
+                $$f^{(k)}(x) = (-1)^k k! (1 - x)^{-(k + 1)}$$
+                We will show that $A(k + 1)$ is true by showing that 
+                $$f^{(k + 1)}(x) = (-1)^{(k + 1)} (k + 1)! (1-x)^{-((k + 1) + 1)}$$
+            }
+        \end{itemize}
+        \spacing
+        
+        \textbf{Proof:} We will used a proof by induction to prove the statement $A(n)$ given by \\$f^{(n)} = (-1)^n n! (1 - x)^{-(n + 1)}$ for $n \in \N$.
+        \spacing
+
+        First, we'll show the base case $A(0)$ to be true. Computing $A(0)$, we get
+        $$f^0(x) = (-1)^0 0! (1 - x)^{-(0 + 1)}$$
+        This is equivalent to $f(x) = \frac{1}{1-x}$ which means $A(0)$ is true.
+        \spacing
+
+        Now, we'll start with the inductive step by assuming that for some $k \in \N$, $A(k)$ is true. That is,
+        $$f^{(k)}(x) = (-1)^k k! (1 - x)^{-(k + 1)}$$
+
+        We will show that $A(k + 1)$ is true by showing that 
+        $$f^{(k + 1)}(x) = (-1)^{(k + 1)} (k + 1)! (1-x)^{-((k + 1) + 1)}$$
+
+        Looking at the left hand side of the $A(k + 1)$ statement, we can use our inductive assumption to show the following
+        
+        \begin{align*}
+            f^{(k + 1)}(x) = \frac{d}{dx}f^{(k)}(x) & = \frac{d}{dx} (-1)^k k! (1 - x)^{-(k + 1)}\\
+            & = (-1)^k k! \frac{d}{dx} (1 - x)^{-(k + 1)} \\
+            & = (-1)^k k! \cdot -(k + 1) (1-x)^{-(k + 1) - 1} \\
+            & = (-1)(-1)^k (k + 1)k! (1 - x)^{-((k + 1) + 1)} \\
+            & = (-1)^{k + 1} (k + 1)! (1 - x)^{-((k + 1) +1)}
+        \end{align*}
+        Thus, we have used our inductive assumption to show that $A(k + 1)$ is true.
+        \spacing
+        
+        By induction, we now know that the statement $A(n)$ given by $f^{(n)}(x) = (-1)^n n! (1 - x)^{-(n + 1)}$ is true for all $n \in \N$.\\
+        \proofEnd
+    \end{paragraph}
+    
+    \bigskip
+
+    \begin{paragraph}{3)}
+        \textbf{Proposition:} Let $x > -1$. Show that $(1 + x)^n \geq 1 + nx$ where $n \in \{m \in \N \mid m \geq 1\}$
+        \spacing
+        
+        \textbf{Discussion:} Since the inequality can be said to be indexed by natural numbers and it seems that we can use the combination of inequalities and exponent properties to relate $k$ to $k + 1$.
+        
+        \begin{itemize}
+            \item {
+            Identify $A(n)$: $A(n)$ is the statement $(1 + x)^n \geq 1 + nx$
+            }
+            
+            \item{
+            Base Case: We will show that A(1) is true because some quantity $a$ will always be greater than or equal to $a$
+            }
+            
+            \item{
+            Inductive step: We'll assume that for $k \geq 1$ such that $k \in \N$,
+            $$(1 + x)^k = 1 + kx$$
+            We will show that $A(k + 1)$ is also true by showing that 
+            $$(1 + x)^{k + 1} = 1 + (k + 1)x$$
+            }
+        \end{itemize}
+        \spacing
+        
+        \textbf{Proof:} We will use a proof by induction to prove the statement $A(n)$ given by 
+        $(1 + x)^n \geq 1 + nx$ where $x > -1$ and $n$ is all the integers such that $n \geq 1$.
+        \spacing
+
+        First we'll prove the base case $A(1)$ to be true. Computing $A(1)$, we get
+        $$(1 + x) ^ 1 \stackrel{?}{=} 1 + (1)x$$
+        $$1 + x \geq 1 + x$$
+        Since we created a logically true statement, we can see that $A(1)$ is true.
+        \spacing
+
+        Now, we'll start with the inductive step by assuming that for $k \geq 1$ such that $k \in \N$, $A(k)$ is true, that is,
+        $$(1 + x)^k \geq 1 + kx$$
+        We will show that $A(k +1)$ is true by showing that 
+        $$(1 + x)^{k +1} \geq 1 + (k +1)x$$
+        Looking at the left side of the $A(k + 1)$ statement, we can use our inductive assumption to show the following:
+        $$(1 + x)^{k + 1}$$
+        $$(1 + x)^k \cdot (1 + x)$$
+        $$(1 + x)^k \cdot (1 + x) \geq (1 + kx) \cdot (1 + x)$$
+        $$(1 + x)^k \cdot (1 + x) \geq 1 + x + kx + kx^2$$
+        $$(1 + x)^k \cdot (1 + x) \geq 1 + x + kx + kx^2 \geq 1 + x + kx$$
+        $$(1 + x)^k \cdot (1 + x) \geq 1 + x + kx$$
+        $$(1 + x)^{k + 1} \geq 1 + (k + 1)x$$
+        Thus, we have used our inductive assumption to show that $A(k + 1)$ is true.
+        \spacing
+        
+        By induction, we now know that the statement $A(n)$ given by $(1 + x)^n \geq 1 + nx$ where 
+        $x > -1$ is true for all $n \geq 1$ such that $n \in \N$.\\
+        \proofEnd
+    \end{paragraph}
+\end{document}

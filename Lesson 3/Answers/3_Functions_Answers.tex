@@ -1,0 +1,230 @@
+\input{C:/Code Projects/Caltech Math 0/preamble.tex}
+
+\begin{document}
+
+    \begin{center}
+        \huge \sc Lesson 3 Solutions
+    \end{center}
+
+    \begin{paragraph}{1)}
+    
+    \textbf{a) Proposition:} Assuming $m \neq 0$ and $b$ are real numbers, when $f: \R \rightarrow \R$ given by $f(x) = mx + b$, $f$ is a bijection.  
+    \spacing
+
+    \textbf{Dicussion:} To prove that $f$ is a bijection, we need
+    to prove that $f$ is both an injection and a surjection. 
+    \spacing
+
+    To prove that $f$ is an injection, we will start by assuming that 
+    $f(s_1) = f(s_2)$ and use algebraic manipulation on that expression 
+    to show that $s_1 = s_2$. 
+    \spacing
+
+    To prove that $f$ is surjective, we will start by letting $y \in \R$.
+    We will set $f(x) = y$ and solve for $x$. Then, we will show that $x \in \R$
+    thus making $f$ a surjection. 
+    \spacing
+
+    \textbf{Proof:} To prove that $f$ is a bijection, we need to prove that $f$ is an injection and a surjection.
+    \spacing
+
+    For injectivity, we will let $f(s_1) = f(s_2)$ and show that $s_1 = s_2$.
+    Since $f(s_1) = f(s_2)$, we can say that $m(s_1) + b = m(s_2) + b$.
+    Subtracting $b$ from both sides, we get $m(s_1) = m(s_2)$, and dividing $m$ from both sides,
+    we get $s_1 = s_2$. When $f(s_1) = f(s_2)$, $s_1 = s_2$, so $f$ is an injection.
+    \spacing 
+
+    For surjectivity, let $y \in \R$. Let's start by considering $f(x) = y$ and solve for $x$.
+    $$f(x) = y$$
+    $$mx + b = y$$
+    $$mx = y - b$$
+    $$x = \frac{y-b}{m}$$
+    
+    Since $x = \frac{y - b}{m} \in \R$, $f$ is surjective. 
+    In other words, for $y \in \R$ we have shown that $x$ is the pre-image of $y$ ($f^{-1}(y) = x$),
+    thus proving that $f$ is surjective.
+    \spacing
+
+    Now that we've proven that $f$ is injective and surjective,
+    we have proven that $f$ is a bijection.
+    \bigskip
+
+    \textbf{b) Proposition:} $f$ being a bijection makes it invertible, so find $f^{-1}$ and show that it is an inverse.
+    \spacing
+
+    \textbf{Discussion:} Since $f$ is a bijection, we can find its' inverse
+    $f^{-1}$ by inverting the domain and co-domain and show that $f^{-1}$ is 
+    an inverse by demonstrating that $f^{-1}(f(x)) = x$.
+    \spacing
+
+    \textbf{Proof:} Inverse functions invert the domain and co-domain,
+    so $f^{-1}(x)$ can be found by solving $x = mf^{-1}(x) + b$. Subtracing $b$
+    from both sides, we get that $x - b = mf^{-1}(x)$, and dividing $m$ from 
+    both sides gives us $f^{-1}(x) = \frac{x - b}{m}$.
+    \spacing
+
+    To show that $f^{-1}(x)$ is an inverse, we'll show that $f^{-1}(f(x)) = x$.
+    $$f^{-1}(f(x)) = f^{-1}(mx + b) = \frac{(mx + b) - b}{m} = \frac{mx}{m} = x$$.
+    Thus, $f^{-1}(x)$ is an inverse.
+    \proofEnd
+    \end{paragraph}
+    
+    \bigskip
+
+    \begin{paragraph}{2)}    
+    \textbf{Proposition:} Given that $\gamma, \rho \in \R$ such that $\rho \cdot \gamma \neq 1$
+    and $f: \R - \{-\rho\} \rightarrow \R - \{\gamma\}$, let $$f(x) = \frac{\gamma x + 1}{x + \rho}$$.
+    
+    Show that $f$ is a bijection.
+    
+    \spacing
+    
+    \textbf{Discussion:} To show that $f$ is a bijection, we need to show that $f$ is injective and surjective.
+
+    To show $f$ is an injection, we will start by letting $f(s_1) = f(s_2)$.
+    We will use algebraic manipulation of this expression to show that $s_1 = s_2$.
+    \spacing
+
+    
+    To show that $f$ is surjective, let $y \in \R - \{\gamma\}$. We will solve $f(x) = y$ for $x$
+    and show that $x \in \R - \{-\rho\}$ by showing how $x \neq -\rho$ (since $-\rho$ is the only
+    value excluded from the domain, if we can show that $x \neq -\rho$, then $x$ must be in 
+    the domain). Now, we have shown $x$ is a pre-image of $y$ and therefore $f$ is surjective.
+    \spacing
+
+    \textbf{Proof:} To prove that $f$ is a bijection, we need to show that $f$ is an injection and surjection.
+    \spacing
+
+    To show injectivity, we will let $f(s_1) = f(s_2)$ and show that $s_1 = s_2$.
+    Let's work with $f(s_1) = f(s_2)$.
+    $$f(s_1) = f(s_2)$$
+    $$\frac{\gamma s_1 + 1}{s_1 + \rho} = \frac{\gamma s_2 + 1}{s_2 + \rho}$$
+    $$(\gamma s_1 + 1)(s_2 + \rho) = (\gamma s_2 + 1)(s_1 + \rho)$$
+    $$\gamma s_1 s_2 + \gamma\rho s_1 + s_2 + \rho = \gamma s_1 s_2 + \gamma\rho s_2 + s_1 + \rho$$
+    $$\gamma\rho s_1 + s_2 = \gamma\rho s_2 + s_1$$
+    $$\gamma\rho s_1 - s_1 = \gamma\rho s_2 - s_2$$
+    $$s_1 (\gamma\rho - 1) = s_2 (\gamma\rho - 1)$$
+    $$s_1 = s_2$$
+
+    We have shown that when $f(s_1) = f(s_2)$, $s_1 = s_2$. Thus,
+    $f$ is injective.
+    \spacing
+
+    To show $f$ is a surjection, we will let $y \in \R - \{\gamma\}$.
+    Let's solve $f(x) = y$ for $x$.
+    $$f(x) = y$$
+    $$\frac{\gamma x + 1}{x + \rho} = y$$
+    $$\gamma x + 1 = y(x + \rho)$$
+    $$\gamma x + 1 = xy + \rho y$$
+    $$\gamma x - xy = \rho y - 1$$
+    $$x (\gamma - y) = \rho y - 1$$
+    $$x = \frac{\rho y - 1}{\gamma - y}$$
+
+    To show that $x \in \R - \{-\rho\}$, we will show that $x \neq -\rho$. We'll start by 
+    assuming $x = -\rho$ and show how a contradition arises.
+    $$x = -\rho$$
+    $$\frac{\rho y - 1}{\gamma - y} = -\rho$$
+    $$\rho y - 1 = -\rho(\gamma - y)$$
+    $$\rho y - 1 = \rho y - \rho\gamma $$
+    $$-1 = -\rho\gamma$$
+    $$\rho\gamma = 1$$
+    This contradicts the original given condition that $\rho\gamma \neq 1$, so our 
+    original statement, $x = -\rho$ is false. Thus, $x \neq -\rho$ and therefore
+    $x \in \R - \{-\rho\}$.
+    \spacing
+
+    We have shown that $x$ is a pre-image of $y$ (both $x$ and $y$ are within
+    the domain and range of $f$, respectively) such that $f(x) = y$.
+    Thus, $f$ is surjective.
+    \spacing
+
+    Since $f$ is injective and surjective, we have shown that $f$ is a bijection.
+    \proofEnd
+    \end{paragraph}
+
+    \bigskip
+
+    \begin{paragraph}{3)}
+    \textbf{Proposition:} Let $S, T$, and $R$ be sets, and let $f: S \to T$ and $g: T \to R$ be functions.  If $g \circ f$ is injective, then $f$ is injective.  
+    \spacing
+
+    \textbf{Discussion:}
+    
+    \textit{What we know:} $(g \circ f)$ is injective. Thus, if $(g \circ f)(s_1) = g \circ f(s_2)$, then we know that $s_1 = s_2$. 
+    \spacing
+
+    \textit{What we want:} To prove that $f$ is injective, we will need to show that when $f(s_1) = f(s_2)$, $s_1 = s_2$.
+    \spacing
+
+    \textit{What we'll do:} We'll start by looking at $g \circ f$ being injective.
+    Since it is injective, when we input $(g \circ f)(s_1) = (g \circ f)(s_2)$, we 
+    know that the inputs are equal: $s_1 = s_2$. Now, if we input $f(s_1)$ and $f(s_2)$,
+    we get from the injectivity of $g \circ f$, $(g \circ f)(f(s_1) = (g \circ f)(s_2))$,
+    that $f(s_1) = f(s_2)$. Thus we now have two equalities that when put together
+    make $f$ injuctive by definition.  
+    \spacing
+
+    \textbf{Proof:} We will show that $f$ is injective by showing that $s_1 = s_2$, 
+    for $s_1, s_2 \in S$, and $f(s_1) = f(s_2)$.
+    \spacing
+    
+    We'll start by looking at $g \circ f$ being injective. Thus, when 
+    $(g \circ f)(s_1) = (g \circ f)(s_2)$, we can say that $s_1 = s_2$.
+    Similarly, when $(g \circ f)(f(s_1)) = (g \circ f)(f(s_2))$, we can say that
+    $f(s_1) = f(s_2)$. Since $f(s_1) = f(s_2)$ and $s_1 = s_2$, we can say that 
+    $f$ is injective. 
+
+    \proofEnd
+    \end{paragraph}
+
+    \bigskip
+
+    \begin{paragraph}{4)}
+        Let $C([0,1])$ be the set  of all real, continuous functions on the interval $[0,1].$  That is, $$C([0,1]) = \left\{ f \, \vert \, f: [0,1] \to \mathbb R \textrm{   is a continuous function} \right\}.$$  Thus, an element of the set $C([0,1])$ is simply a function $f(x)$ that is continuous on $[0,1]$.   Furthermore, consider the function $\varphi: C([0,1]) \to \mathbb R$ given by $$\varphi (f) = \int_0^1 f(x) \, dx.$$
+
+        \textbf{a) Proposition:} $\forall a \in \R$, there exists a pre-image $f \in C([0, 1]$) such that $\varphi(f) = a$, so $\varphi$ is surjective.
+        \spacing
+
+        \textbf{Discussion:} To prove that a general function is surjective, we need to start with some
+        arbitrary $y \in Y$, solve for $f(x) = y$, and check whether $x \in X$. To prove $\varphi$ is surjective,
+        we'll start by letting $a \in \R$. From there, we'll solve the equation $\varphi(f) = a$
+        and present a valid solution for $f$. If $f \in C([0, 1])$, then we have proven the surjectity of $\varphi$.
+        \spacing
+
+        \textbf{Proof:} Let $a \in \R$. We'll start by considering $\varphi(f) = a$
+        and solving for $f$. 
+        $$\int_0^1 f(x) \, dx = a$$
+        $$F(1) - F(0) = a$$ 
+        \begin{center}
+            where $F(x)$ is an antiderivative of $f(x)$
+        \end{center}
+        From this, we can see that one possible solution is $f(x) = a$.
+        Since $f(x) = a \in C([0, 1])$, we know that the $\varphi$ is subjective
+        since we started with $a \in \R$ and showed that there was a valid pre-image
+        $f \in C([0, 1])$ such that $\varphi(f) = a$.
+        
+        \bigskip
+        \bigskip
+        
+        \textbf{b) Proposition:} $\varphi$ is not injective
+        \spacing
+        
+        \textbf{Discussion:} To prove that $\varphi$ is not injective,
+        we need to find two distinct functions, $f, g \in C([0, 1])$, such that 
+        $\varphi(f) = \varphi(g)$. Put another way, if $\varphi$ is injective, then
+        when we start with $f \neq g$, $\varphi(f) \neq \varphi(g)$. If 
+        $\varphi(f) = \varphi(g)$, then we know $\varphi$ is not injective.
+        \spacing
+
+        \textbf{Proof:} To prove that $\varphi$ is not injective,
+        let $f(x) = 1$ and $g(x) = 2x$ such that $f, g \in C([0, 1])$. 
+        Note that $f \neq g$. We'll evaulate $\varphi(f)$ and $\varphi(g)$.
+        $$\varphi(f) = \int_0^1 1 \, dx = x |_0^1 = 1 - 0 = 1$$
+        $$\varphi(g) = \int_0^1 2x \, dx = x^2 |_0^1 = 1 - 0 = 1$$.
+        From this, we see that $\varphi(f) = \varphi(g)$ and since
+        $f \neq g$, we have proven that $\varphi$ is not injective.
+
+    \proofEnd
+    \end{paragraph}
+
+\end{document}

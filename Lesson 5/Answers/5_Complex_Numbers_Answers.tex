@@ -1,0 +1,319 @@
+\input{C:/Code Projects/Caltech Math 0/preamble.tex}
+
+\begin{document}
+    \begin{center}
+        \huge\sc Lesson 5 Solutions
+    \end{center}
+
+    \begin{paragraph}{1)}
+        \textbf{Proposition:} Show using Euler's equation that the two angle-sum formulae hold:
+        $$\sin(\alpha + \beta) = \sin\alpha\cos\beta + \sin\beta\cos\alpha$$
+        $$\cos(\alpha + \beta) = \cos\alpha\cos\beta - \sin\alpha\sin\beta$$
+        \spacing        
+
+        \textbf{Discussion:} We'll expand $e^{i(\alpha + \beta)}$
+        and $e^{i\alpha}e^{i\beta}$. We'll then equate the imaginary and real
+        parts of both equations to show that the identities hold.
+        \spacing
+
+        \textbf{Proof:} Consider $e^{i(\alpha + \beta)}$. This can be rewritten as 
+        $e^{i\alpha}e^{i\beta}$ using the general properties of exponents.
+        \spacing
+
+        Let's expand $e^{i(\alpha + \beta)}$:
+        $$e^{i(\alpha + \beta)} = \cos(\alpha + \beta) + i\sin(\alpha + \beta)$$
+        \spacing
+
+        Now, let's expand $e^{i\alpha}e^{i\beta}$:
+        $$e^{i\alpha}e^{i\beta} = (\cos\alpha + i\sin\alpha)(\cos\beta + i\sin\beta) = \cos\alpha\cos\beta + i\cos\alpha\sin\beta + i\sin\alpha\cos\beta + i^2\sin\alpha\sin\beta = $$
+        $$(\cos\alpha\cos\beta - \sin\alpha\sin\beta) + i(\cos\alpha\sin\beta + \sin\alpha\cos\beta)$$
+        \spacing
+
+        Since the above expressions are all equal, we can write
+        $$\cos(\alpha + \beta) + i\sin(\alpha + \beta) = (\cos\alpha\cos\beta - \sin\alpha\sin\beta) + i(\cos\alpha\sin\beta + \sin\alpha\cos\beta)$$
+        \spacing
+
+        For the above equation to be true, the real and imaginary parts must be equal. Thus, we get the double-angle forumlae:
+        $$\sin(\alpha + \beta) = \sin\alpha\cos\beta + \sin\beta\cos\alpha$$
+        $$\cos(\alpha + \beta) = \cos\alpha\cos\beta - \sin\alpha\sin\beta$$
+        \proofEnd
+    \end{paragraph}
+
+    \bigskip
+
+    \begin{paragraph}{2)}
+
+        \textbf{a) Proposition:} $|z| =$ Re($z$) $\iff z \in R_0^+$
+        \spacing
+
+        \textbf{Dicussion:} To prove the biconditional statement, 
+        we'll need to prove that $|z| =$ Re($z$) $\Rightarrow z \in R_0^+$
+        and $z \in R_0^+ \Rightarrow |z| =$ Re($z$).
+        \spacing
+
+        To prove the first statement, we'll prove the contrapositive
+        to get information about $z$. Since $z \notin R_0^+$, we can 
+        take $z = -a$ and $z = a + bi$ (we're looking at both values
+        to cover all possible values of $z$ outside of $R_0^+$). We 
+        can find the magnitude of both $z$ values and show that it is 
+        not equal to Re($z$).
+        \spacing
+
+        To prove the second statement, since $z \in R_0^+$, we can say 
+        that there is some $a \in \R_0^+$ such that $z = a$. From there,
+        we can find $|z|$ and show that it is equal to $a$ which is the real
+        part of $z$, thus proving the second statement.
+        \spacing
+
+        Now that we've proven both statements, we can say that the 
+        original biconditional statement is true.
+        \spacing
+
+        \textbf{Proof:} To prove that $|z| =$ Re($z$) $\iff z \in R_0^+$, 
+        we will need to prove that $|z| = $ Re($z$) $\Rightarrow z \in R_0^+$
+        and $z \in R_0^+ \Rightarrow |z| =$ Re($z$).
+        \spacing
+
+        To prove the first statement $|z| = $ Re($z$) $\Rightarrow z \in R_0^+$, we'll prove the contrapositive which
+        states that $z \notin R_0^+ \Rightarrow |z| \neq$ Re($z$).
+        Since $z \notin R_0^+$, there are two general possibilities for 
+        $z$. $z_1 = -a$ or $z_2 = b + ci$ where $a \in R_0^+$ and $b, c \in \R$.
+        The real parts are Re($z_1$) = $-a$ and Re($z_2$) = $b$. Now, let's look at both cases:
+        $$|z_1| = \sqrt{(-a)^2} = \sqrt{a^2} = a \neq \text{Re}(z_1)$$
+        $$|z_2| = \sqrt{b^2 + c^2} \neq \text{Re}(z_2)$$.
+        In both cases, we have shown $|z| \neq \text{Re}(z)$ as desired,
+        thus proving the contrapositive and the orginal statement.
+        \spacing
+        
+        To prove the second statement $z \in R_0^+ \Rightarrow |z| =$ Re($z$),
+        we'll start by letting $z = a$ for some $a \in R_0^+$. Thus,
+        $\text{Re}(z) = a$. Now, let's look at $|z|$:
+        $$|z| = \sqrt{a^2} = a = \text{Re}(z)$$
+        Thus, we have shown that $|z| = \text{Re}(z)$ as desired, proving the
+        second statement. 
+        \spacing
+
+        Now that we've proven both conditional statements, we can say that we've
+        proven the biconditional statement ``$|z| = \text{Re}(z)$ if and 
+        only if $z$ is a non-negative real number.''\\
+        \proofEnd
+        \bigskip
+
+        \textbf{b) Proposition:} ($\overline{z})^2 = z^2$ if and only if $z$ is purely real or purely imaginary.
+        \spacing
+
+        \textbf{Dicussion:} To prove the proposition, we need to prove two conditional statements
+        ``If ($\overline{z})^2 = z^2$, then $z$ is purely real or purely imaginary.'' and 
+        ``If $z$ is purely real or purely imaginary, then ($\overline{z})^2 = z^2$''.
+        \spacing
+
+        To prove the first statement, we will prove the contrapositive since that gives us 
+        information about $z$. The contrapositive states that ``If $z$ is not purely imaginary and
+        not purely real, then ($\overline{z})^2 \neq z^2$'' which is equivalent to saying 
+        ``If $z$ is a complex number with real and imaginary parts, then ($\overline{z})^2 \neq z^2$''.
+        We can show this by letting $z = a + bi$ for some $a, b \in \R$ and show how 
+        ($\overline{z})^2 \neq z^2$.
+        \spacing
+
+        To prove the second statement, we'll look at two cases: $z$ is purely real, and $z$ is purely imaginary
+        and show how in each case $(\overline{z})^2 = z^2$.
+        \spacing
+
+        \textbf{Proof:} To prove the biconditional statement, we will need to prove
+        two conditional statements: ``If $(\overline{z})^2 = z^2$, then $z$ is 
+        purely real or purely imaginary'' and ``If $z$ is purely real or purely imaginary,
+        then $(\overline{z})^2 = z^2$.''
+        \spacing
+
+        To prove the first statement ``If $(\overline{z})^2 = z^2$, then $z$ is 
+        purely real or purely imaginary'', we will prove the contrapositive which states
+        that ``If $z$ is a complex number with real and imaginary parts, then 
+        $(\overline{z})^2 \neq z^2$.'' Since $z$ has real and imaginary parts, we can write
+        $z = a + bi$ where $a, b \neq 0$ and $a, b \in \R$. From this, we then know that
+        $z^2 = a^2 - b^2 + 2abi$, Thus,
+        $$(\overline{z})^2 = (a - bi)^2 = a^2 + b^2 - 2abi \neq z^2$$
+        Thus, we have shown that $(\overline{z})^2 \neq z^2$, as desired, proving the 
+        contrapositive. Since we have proved the contrapositive, we have proven the 
+        first statement. 
+        \spacing        
+        
+        To prove the second statement ``If $z$ is purely real or purely imaginary,
+        then $(\overline{z})^2 = z^2$'', we'll start by looking at two cases:
+        $z$ is purely real or $z$ is purely imaginary.
+
+        \begin{itemize}
+            \item{
+                \textbf{$z$ is purely real:} If $z$ is purely real, then $z = a + 0i$ where $a \in \R$. Thus,
+                $$(\overline{z})^2 = (a - 0i)^2 = (a)^2 = z^2$$
+                Thus, we have shown that when $z$ is purely real, $(\overline{z})^2 = z^2$.
+            }
+
+            \item{
+                \textbf{$z$ is purely imaginary:} If $z$ is purely imaginary, then $z = 0 + bi$ where $b \in \R$. Thus,
+                $$(\overline{z})^2 = (0 - bi)^2 = (-bi)^2 = (-1)^2(bi)^2 = (bi)^2 = z^2$$
+                Thus, we have shown that when $z$ is purely imaginary, $(\overline{z})^2 = z^2$.
+            }
+        \end{itemize}
+        We have shown in both cases that $(\overline{z})^2 = z^2$  as desired, so we have proven 
+        the second statement.
+        \spacing
+
+        Now that we've proven both conditional statements, we have proven the statement 
+        ``$(\overline{z})^2 = z^2$ if and only if $z$ is either purely real or purely imaginary''.
+        
+        \proofEnd
+    \end{paragraph}
+
+    \bigskip
+
+    \begin{paragraph}{3)}
+        \textbf{a) Proposition:} If $z = a + bi$ and $w = c + di$, then $|z \cdot w| = |z| \cdot |w|$
+        \spacing
+
+        \textbf{Dicussion:} We'll show that the equation is true by 
+        just plugging in the cartesian forms and questioning whether the 
+        equation is true. Once we show that a true statement emerges, we'll know 
+        the statement is true. 
+        \spacing
+
+        \textbf{Proof:}
+        $$|z \cdot w| \stackrel{?}{=} |z| \cdot |w|$$
+        $$|(a + bi) \cdot (c + di)| \stackrel{?}{=} |a + bi| \cdot |c + di|$$
+        $$|ac + adi + bci - bd| \stackrel{?}{=} |a + bi| \cdot |c + di|$$
+        $$\sqrt{(ac - bd)^2 + (ad + bc)^2} \stackrel{?}{=} \sqrt{a^2 + b^2} \cdot \sqrt{c^2 + d^2}$$
+        $$\sqrt{(ac)^2 - 2abcd + (bd)^2 + (ad)^2 + 2abcd + (bc)^2} \stackrel{?}{=} \sqrt{(a^2 + b^2)(c^2 + d^2)}$$
+        $$(ac)^2 + (bd)^2 + (ad)^2 + (bc)^2 \stackrel{?}{=} (a^2 + b^2)(c^2 + d^2)$$
+        $$a^2c^2 + b^2d^2 + a^2d^2 + b^2c^2 \stackrel{?}{=} a^2c^2 + a^2d^2 + b^2c^2 + b^2d^2$$
+        $$0 = 0$$
+        
+        Thus we have shown that when $z = a + bi$ and $w = c + di$,
+        $|z \cdot w| = |z| \cdot |w|$.\\
+        \proofEnd\bigskip
+
+        \textbf{b) Proposition:} If $z =  r_1e^{i\theta_1}$ and $w = r_2e^{i\theta_2}$, then $|z \cdot w| = |z| \cdot |w|$
+        \spacing
+
+        \textbf{Dicussion:} We'll show that the equation is true by 
+        just plugging in the polar forms and and questioning whether the 
+        equation is true. Once we show that a true statement emerges, we'll know 
+        the statement is true. We'll make use of the fact that if $z = re^{i\theta}$,
+        then $|z| = r$.
+        \spacing
+
+        \textbf{Proof:}
+        $$|z \cdot w| \stackrel{?}{=} |z| \cdot |w|$$
+        $$|r_1e^{i\theta_1} \cdot r_2e^{i\theta_2}| \stackrel{?}{=} |r_1e^{i\theta_1}| \cdot |r_2e^{i\theta_2}|$$
+        $$|(r_1 \cdot r_2)e^{i\theta_1 + i\theta_2}| \stackrel{?}{=} r_1 \cdot r_2$$
+        $$|(r_1 \cdot r_2)e^{i (\theta_1 + \theta_2)}| \stackrel{?}{=} r_1 \cdot r_2$$
+        $$r_1 \cdot r_2 = r_1 \cdot r_2$$
+
+        Thus we have shown that when $z = r_1e^{i\theta_1}$ and 
+        $w = r_2e^{i\theta_2}$, then $|z \cdot w| = |z| \cdot |w|$.\\
+        \proofEnd
+    \end{paragraph}
+
+    \pagebreak
+
+    \begin{paragraph}{4)} For all the following parts, let $z = a + bi$ and $w = c + di$.
+        \spacing
+
+        \textbf{a) Proposition:} $\overline{z + w} = \overline{z} + \overline{w}$
+        \spacing
+
+        \textbf{Discussion:} We'll show that the equation is true 
+        by just plugging in the cartesian forms of $z$ and $w$ 
+        and and questioning whether the 
+        equation is true. Once we show that a true statement emerges, we'll know 
+        the statement is true.
+        \spacing
+
+        \textbf{Proof:}
+        $$\overline{z + w} \stackrel{?}{=} \overline{z} + \overline{w}$$
+        $$\overline{a + bi + c + di} \stackrel{?}{=} \overline{a + bi} + \overline{c + di} $$
+        $$\overline{(a + c) + (b + d)i} \stackrel{?}{=} (a - bi) + (c - di)$$
+        $$(a + c) - (b + d)i \stackrel{?}{=} a + c - bi - di$$
+        $$(a + c) - (b + d)i = a + c - (b + d)i$$
+        \spacing
+
+        Thus we have shown that $\overline{z + w} = \overline{z} + \overline{w}$.
+        
+        \proofEnd\bigskip
+
+        \textbf{b) Proposition:} $\overline{z \cdot w} = \overline{z} \cdot \overline{w}$
+        \spacing
+
+        \textbf{Discussion:} Similar to (a), we'll show that the equation holds by just 
+        pluggin in the cartesian forms ofr $z$ and $w$ and and questioning whether the 
+        equation is true. Once we show that a true statement emerges, we'll know 
+        the statement is true.
+        \spacing
+        
+        \textbf{Proof:} 
+        $$\overline{z \cdot w} \stackrel{?}{=} \overline{z} \cdot \overline{w}$$
+        $$\overline{(a + bi) \cdot (c + di)} \stackrel{?}{=} \overline{a + bi} \cdot \overline{c + di}$$
+        $$\overline{ac + adi + bci + i^2bd} \stackrel{?}{=} (a - bi) \cdot (c - di)$$
+        $$\overline{(ac - bd) + (ad + bc)i} \stackrel{?}{=} ac - adi - bci + i^2bd$$
+        $$(ac - bd) - (ad + bc)i = (ac - bd) - (ad + bc)i$$
+
+        Thus, we have shown that $\overline{z \cdot w} = \overline{z} \cdot \overline{w}$\\
+        \proofEnd\bigskip
+
+        \textbf{c) Proposition:} For $n \in \N$, $\overline{z^n} = (\overline{z})^n$
+        \spacing
+
+        \textbf{Discussion:} We'll prove this statement by rewriting $\overline{z^n}$
+        as $\overline{z^{n-1} \cdot z}$ and $(\overline{z})^n$ as 
+        $(\overline{z})^{n-1} \cdot (\overline{z})$.
+        Since $z^{n-1}$ and $z$ are different complex numbers, we can see from (b)
+        that the inital statement holds.
+        \spacing
+
+        \textbf{Proof:} To start, let's rewrite $\overline{z^n} \stackrel{?}{=} (\overline{z})^n$
+        as $$\overline{z^{n - 1} \cdot z} = (\overline{z})^{n-1} \cdot (\overline{z})$$
+        using our exponent properties. Since $z^{n-1}$ and $z$ are just different complex numbers, we can see from 
+        (b) that the original equation holds true. Thus, $\overline{z^n} = (\overline{z})^n$.\\
+        \proofEnd\pagebreak
+
+        \textbf{d) Proposition:} Consider the polynomial $p(z) = \alpha_nz^n + \alpha_{n-1}z^{n-2} + \cdots +\alpha_iz + \alpha_0$ where $\alpha_i \in \R$. If $p(w) = 0$ such that $w \in \C$, show that $p(\overline{w}) = 0$.
+        \spacing
+
+        \textbf{Discussion:} This problem seems daunting at first, but all it comes down to is generalizing 
+        the statements we proved in (a) - (c). The best way to show this is to look at a simpler case. 
+        Let $f(z)=\alpha_iz^2 +\alpha_iz + \alpha_0$ where $\alpha_i \in \R$, and let $x \in \C$ be a root to $f(z)$ such that $f(x) = 0$.
+        Let's plug in $\overline{x}$. We get that $f(\overline{x}) = \alpha_2(\overline{x})^2 + \alpha_1\overline{x} + \alpha_0$. 
+        Using (c), we can rewrite this as $f(\overline{x}) = \alpha_2\overline{x^2} + \alpha_1\overline{x} + \alpha_0$.
+        Since $\alpha_i$ is a real constant, when multipled with a complex number, it'll just give another complex number.
+        Similarly, raising a complex number to a natural number. just gives us another complex number. That means that 
+        $\alpha_2\overline{x^2}$ and $\alpha_1\overline{x}$ is just another complex number.
+        Thus, we can use (a) to rewrite it as $f(\overline{x}) = \overline{\alpha_2x^2 +\alpha_ix + \alpha_0}$.
+        Now, we recognize that $f(\overline{x}) = \overline{f(x)}$. Since $f(x) = 0$ and
+        $\overline{0} = 0$, $f(\overline{x}) = 0$. This can be applied to any polynomial like $f$, 
+        in our case $p$, without loss of generality.
+        \spacing
+        
+        Note that while (b) wasn't directly applied, it was needed to prove (c) which is directly applied.
+        \spacing
+
+        \textbf{Proof:} We'll start by looking at $p(z)$ and generally applying (a) - (c)
+        $$p(z) = \alpha_nz^n + \alpha_{n-1}z^{n-1} + \cdots +\alpha_1z + \alpha_0$$
+        $$p(w) = \alpha_nw^n + \alpha_{n-1}w^{n-1} + \cdots + \alpha_1w + \alpha_0 = 0$$ 
+        \begin{center}
+            \separate
+        \end{center}
+        $$p(\overline{w}) = \alpha_n(\overline{w})^n + \alpha_{n-1}(\overline{w})^{n-1} + \cdots +\alpha_1\overline{w} + \alpha_0$$
+        Using (c), we can go through each term and rewrite it:
+        $$p(\overline{w}) = \alpha_n\overline{w^n} + \alpha_{n-1}\overline{w^{n-1}} + \cdots + \alpha_1\overline{w} + \alpha_0$$
+        Since $\alpha_i$ is a real constant, when multipled with a complex number, it'll just give another complex number.
+        Similarly, raising a complex number to a natural number just gives us another complex number.\\ Thus, using (a)
+        in a general sense (if we can apply it two terms, we can apply to $n$ terms W.L.O.G.)
+        $$p(\overline{w}) = \overline{\alpha_nw^n + \alpha_{n-1}w^{n-1} + \cdots +\alpha_1w + \alpha_0}$$
+        $$p(\overline{w}) = \overline{p(w)}$$
+        $$p(\overline{w}) = \overline{0}$$
+        $$p(\overline{w}) = 0$$
+
+        Thus, we have proven that when we have a real polynomial using complex
+        numbers (say $f$) and $f(w) = 0$, then $f(\overline{w}) = 0$ as well.\\ 
+        \proofEnd
+    \end{paragraph}
+
+\end{document}
